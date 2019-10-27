@@ -1,0 +1,31 @@
+/* pages/Profile/profile.wxss */
+.version{
+    position: absolute;
+    bottom: 50rpx;
+    color: lightgray;
+    width: 100%;
+    text-align: center;
+    font-size: 30rpx;
+}
+.bgImage{
+    height: 400rpx;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+.BGView {
+    display: flex;
+    height: 400rpx;
+    justify-content: center;
+    align-items: center;
+    
+}
+.login {
+    width: 300rpx;
+    height: 80rpx;
+    color: rgb(168, 122, 255);
+    background-color: lightpink;
+    line-height: 80rpx;
+    text-align: center;
+    border-radius: 40rpx;
+}

@@ -1,0 +1,18 @@
+<!--pages/Profile/profile.wxml-->
+
+<view>
+    
+<view class="BGView">
+
+<image class="bgImage" src="/assets/imgs/bg_mine_login.png" mode="scaleToFill"></image>
+<view class="login" bind:tap="LoginButtonClick">登录</view>
+
+</view>
+
+<view class="version">V1.3.2 </view>
+
+
+</view>
+  
+
+
