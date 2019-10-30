@@ -9,6 +9,34 @@
 
 </view>
 
+<view class="MyVideoAndBook">
+
+<!-- 我的书影音 -->
+<view class="myBook">我的书影音</view>
+<!-- 查看更多 -->
+<view class="SeeMore">查看更多 ></view>
+</view>
+
+<!-- 列表 -->
+
+<!-- <block wx:for="{{listData}}" wx:key="index">
+
+    <view class="text_content">{{item}}</view>
+    
+</block> -->
+
+<Videos id="MyPfofile"  wx:for="{{goodsArray}}" wx:key="unique"
+  title="{{item.title}}"
+  desc="{{item.desc}}"
+  price="{{item.price}}"
+  num="{{item.num}}">
+
+  </Videos>
+
+
+
+
+<!-- 版本号 -->
 <view class="version">V1.3.2 </view>
 
 

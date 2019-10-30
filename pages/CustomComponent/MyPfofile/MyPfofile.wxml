@@ -1,0 +1,19 @@
+<!--pages/CustomComponent/MyVideosAndBooks/MyPfofile.wxml-->
+
+<view class='list-group'>
+  <view class='list-left'>
+    <image src='/assets/imgs/ic_launcher.png' class='img' mode="widthFix"></image>
+  </view>
+  <view class='list-right'>
+    <view class='title'>{{title}}</view>
+    <view class='desc'>{{desc}}</view>
+    <view class='price-box'>
+      <text class='price'>{{price}}</text>
+      <text class='num'>x{{num}}</text>
+    </view>
+    <view class='illustrate'>
+      <text>支持7天无理由退货</text>
+      <a class='more'>价格说明</a>
+    </view>
+  </view>
+</view>

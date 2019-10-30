@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText" :"书影音档案"
+    "usingComponents": {
+        "MyPfofile": "/pages/CustomComponent/Videos/Videos"
+    },
+    "navigationBarTitleText": "书影音档案"
+
 }
