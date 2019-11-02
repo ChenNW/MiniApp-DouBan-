@@ -1,2 +1,21 @@
 <!--pages/CustomComponent/Videos/Videos.wxml-->
-<text>pages/CustomComponent/Videos/Videos.wxml</text>
+
+<view class="bgView">
+
+<view class="leftView">
+
+<image class="leftImage" src="/assets/imgs/ic_cat_book.png"></image>
+
+</view>
+
+<view class="rightView">
+
+
+
+    
+</view>
+
+
+
+</view>
+

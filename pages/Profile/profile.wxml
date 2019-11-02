@@ -1,46 +1,41 @@
-<!--pages/Profile/profile.wxml-->
-
+<!-- pages/Profile/profile.wxml -->
 <view>
-    
-<view class="BGView">
-
-<image class="bgImage" src="/assets/imgs/bg_mine_login.png" mode="scaleToFill"></image>
-<view class="login" bind:tap="LoginButtonClick">登录</view>
-
+  <view class="BGView">
+    <image class="bgImage" src="/assets/imgs/bg_mine_login.png" mode="scaleToFill"></image>
+    <view class="login" bind:tap="LoginButtonClick">登录</view>
+  </view>
+  <view class="MyVideoAndBook">
+    <!-- 头部视图 -->
+    <view class="topView">
+      <view class="myBook">我的书影音</view>
+      <view class="topRightView">
+        <view class="SeeMore">查看更多</view>
+        <view class="rightArror"></view>
+      </view>
+    </view>
+    <!-- 列表 -->
+    <view class="listview">
+      <view class="leftView">
+        <image class="leftImage" src="/assets/imgs/ic_cat_movie.png"></image>
+      </view>
+      <view class="rightInfoView">
+        <view class="rightLeftView">
+          <view class="topView">观影分析</view>
+          <view class="bottom">
+            <view class="number">0</view>
+            <view class="title">看过</view>
+          </view>
+        </view>
+        <view class="rightAllView">
+          <text class="detailView">标记10本书,\n开启读书分析</text>
+          <view class="rightBegin">
+            <view class="begin">立即开启</view>
+            <view class="rightArror"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 版本号 -->
+  <view class="version">V1.3.2</view>
 </view>
-
-<view class="MyVideoAndBook">
-
-<!-- 我的书影音 -->
-<view class="myBook">我的书影音</view>
-<!-- 查看更多 -->
-<view class="SeeMore">查看更多 ></view>
-</view>
-
-<!-- 列表 -->
-
-<!-- <block wx:for="{{listData}}" wx:key="index">
-
-    <view class="text_content">{{item}}</view>
-    
-</block> -->
-
-<Videos id="MyPfofile"  wx:for="{{goodsArray}}" wx:key="unique"
-  title="{{item.title}}"
-  desc="{{item.desc}}"
-  price="{{item.price}}"
-  num="{{item.num}}">
-
-  </Videos>
-
-
-
-
-<!-- 版本号 -->
-<view class="version">V1.3.2 </view>
-
-
-</view>
-  
-
-

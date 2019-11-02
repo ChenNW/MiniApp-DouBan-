@@ -33,32 +33,91 @@
     border-radius: 40rpx;
 }
 
-.MyVideoAndBook {
+.topView {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.MyVideoAndBook .myBook {
+.topView .myBook {
     padding-left: 20rpx;
     height: 80rpx;
     line-height: 80rpx;
 }
 
-.MyVideoAndBook .SeeMore {
-    height: 80rpx;
-    line-height: 80rpx;
-    position: absolute;
-    right: 40rpx;
-    color: lightslategrey;
+.topView .topRightView {
+    display: flex;
+    align-items: center;
+    color: #838383;
+    font-size: 30rpx;
+    padding-right: 40rpx;
+}
+
+.MyVideoAndBook .rightArror {
+    width: 20rpx;
+    height: 20rpx;
+    border: 2rpx solid #7F7F7F;
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: none;
 }
 
 
-/* 列表 */
+/* 右侧视图布局 */
 
-.text_content {
-    color: gray;
-    font-size: 40rpx;
-    text-align: center;
-    border-bottom: 1rpx solid #f5f5f5;
-    height: 100rpx;
-    line-height: 100rpx;
+.listview {
+    display: flex;
+    align-items: center;
+}
+
+.leftView .leftImage {
+    width: 80rpx;
+    height: 80rpx;
+    padding: 0 30rpx;
+}
+
+.rightLeftView .topView {
+    font-size: 34rpx;
+    color: #333333;
+}
+
+.rightInfoView {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.rightInfoView .bottom {
+    align-items: flex-end;
+    display: flex;
+}
+
+.rightLeftView .number {
+    font-size: 60rpx;
+    color: #818181;
+}
+
+.rightLeftView .title {
+    font-size: 30rpx;
+    color: #818181;
+    margin-bottom: 10rpx;
+    padding-left: 10rpx;
+}
+
+.rightAllView {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin-left: 30rpx;
+    margin-right: 40rpx;
+    align-items: center;
+}
+
+.rightAllView .detailView {
+    font-size: 30rpx;
+}
+
+.rightBegin {
+    display: flex;
+    align-items: center;
 }
