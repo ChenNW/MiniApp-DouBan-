@@ -33,7 +33,9 @@
             <view class="rightArror"></view>
           </view>
         </view>
+        <view class="devider"></view>
       </view>
+      
     </view>
   </view>
   <!-- 版本号 -->

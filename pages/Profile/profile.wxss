@@ -85,6 +85,8 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: flex-end;
+    background-color: purple;
 }
 
 .rightInfoView .bottom {
@@ -110,6 +112,7 @@
     justify-content: space-between;
     margin-left: 30rpx;
     margin-right: 40rpx;
+    color: #C8C8C8;
     align-items: center;
 }
 
@@ -117,7 +120,26 @@
     font-size: 30rpx;
 }
 
+.rightAllView .rightBegin .begin {
+    color: #484848;
+    background-color: #F5F5F5;
+    width: 160rpx;
+    font-size: 30rpx;
+    line-height: 50rpx;
+    height: 50rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}
+
 .rightBegin {
     display: flex;
     align-items: center;
+}
+
+.devider {
+    background-color: red;
+    height: 2rpx;
+    /* width: 100%; */
+    /* position: absolute; */
+    bottom: 20rpx;
 }
