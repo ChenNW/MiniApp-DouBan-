@@ -6,43 +6,36 @@ Page({
     },
     // 列表
     data: {
-        goodsArray: [{
-                title: '颜域蝴蝶结荷叶领雪纺连衣裙女夏时尚高端斑点裙子2018年新款热销',
-                desc: '黑点 M码',
-                price: '￥999.0',
-                num: '2'
+        items: [
+            {
+              icon: 'ic_cat_movie.png',
+              title: '观影分析',
+              count: 0,
+              has: '看过',
+              mark: '标记10部影片\n开启观影分析'
             },
             {
-                title: '颜域蝴蝶结荷叶领雪纺连衣裙女夏时尚高端斑点裙子2018年新款热销',
-                desc: '黑点 M码',
-                price: '￥999.0',
-                num: '2'
+              icon: 'ic_cat_book.png',
+              title: '读书分析',
+              count: 0,
+              has: '读过',
+              mark: '标记10本书\n开启读书分析'
             },
             {
-                title: '颜域蝴蝶结荷叶领雪纺连衣裙女夏时尚高端斑点裙子2018年新款热销',
-                desc: '黑点 M码',
-                price: '￥999.0',
-                num: '2'
-            },
-            {
-                title: '颜域蝴蝶结荷叶领雪纺连衣裙女夏时尚高端斑点裙子2018年新款热销',
-                desc: '黑点 M码',
-                price: '￥999.0',
-                num: '2'
-            },
-            {
-                title: '颜域蝴蝶结荷叶领雪纺连衣裙女夏时尚高端斑点裙子2018年新款热销',
-                desc: '黑点 M码',
-                price: '￥999.0',
-                num: '2'
+              icon: 'ic_cat_music.png',
+              title: '音乐分析',
+              count: 0,
+              has: '听过',
+              mark: '标记10张唱片\n开启观音乐分析'
             }
-        ]
+          ]
     },
-    canvasIdErrorCallback: function(e) {
-        console.error(e.detail.errMsg)
-    },
-    onReady: function(e) {
-        this.goodsList = this.selectComponent("#goodsList");
+
+    beginAction:function(evt){
+
+        console.log(evt)
+
     }
+   
 
 })

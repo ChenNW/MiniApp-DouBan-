@@ -31,6 +31,7 @@
     line-height: 80rpx;
     text-align: center;
     border-radius: 40rpx;
+    box-shadow: 4rpx 4rpx 2rpx 2rpx #666666;
 }
 
 .topView {
@@ -68,6 +69,8 @@
 .listview {
     display: flex;
     align-items: center;
+    padding-top: 20rpx;
+
 }
 
 .leftView .leftImage {
@@ -80,13 +83,17 @@
     font-size: 34rpx;
     color: #333333;
 }
-
 .rightInfoView {
-    display: flex;
-    width: 100%;
+    /* background-color: rebeccapurple; */
+    flex: 1;
     justify-content: space-between;
     align-items: flex-end;
-    background-color: purple;
+    padding-right: 30rpx;
+}
+
+.rightBGView {
+    display: flex;
+    padding-right: 10rpx;
 }
 
 .rightInfoView .bottom {
@@ -111,9 +118,9 @@
     flex: 1;
     justify-content: space-between;
     margin-left: 30rpx;
-    margin-right: 40rpx;
     color: #C8C8C8;
     align-items: center;
+
 }
 
 .rightAllView .detailView {
@@ -129,6 +136,7 @@
     height: 50rpx;
     text-align: center;
     border-radius: 10rpx;
+    margin-right: 20rpx;
 }
 
 .rightBegin {
@@ -137,9 +145,10 @@
 }
 
 .devider {
-    background-color: red;
-    height: 2rpx;
-    /* width: 100%; */
-    /* position: absolute; */
-    bottom: 20rpx;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 3rpx;
+    width: 100%;
+    margin-top: 20rpx;
+
+
 }
