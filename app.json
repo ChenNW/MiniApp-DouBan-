@@ -1,5 +1,7 @@
 {
     "pages": [
+        "pages/Home/Home",
+        "pages/List/List",
         "pages/Profile/profile",
         "pages/Login/login",
         "pages/Agreement/agreement",
@@ -12,5 +14,41 @@
         "navigationBarTitleText": "WeChat",
         "navigationBarTextStyle": "black"
     },
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "permission": {
+        "scope.userLocation": {
+            "desc": "请允许获取您的位置,来为您展示附近的优惠"
+        }
+    },
+    "tabBar": {
+        "list": [{
+                "pagePath": "pages/Home/Home",
+                "text": "首页",
+                "iconPath": "/assets/imgs/ic_tab_home_normal.png",
+                "selectedIconPath": "/assets/imgs/ic_tab_home_active.png"
+            },
+            {
+                "pagePath": "pages/List/List",
+                "text": "榜单",
+                "iconPath": "/assets/imgs/ic_tab_subject_normal.png",
+                "selectedIconPath": "/assets/imgs/ic_tab_subject_active.png"
+            },
+            {
+                "pagePath": "pages/Profile/profile",
+                "text": "我的",
+                "iconPath": "/assets/imgs/ic_tab_profile_normal.png",
+                "selectedIconPath": "/assets/imgs/ic_tab_profile_active.png"
+            }
+        ],
+        "color": "#a9b7b7",
+        "borderStyle": "black"
+    },
+    "debug": true,
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "navigateToMiniProgramAppIdList": [
+        "wx0377387d7d5af2d5"
+    ]
 }

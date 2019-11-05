@@ -8,9 +8,9 @@
 
 <view class="open" bind:tap="agreement">豆瓣使用协议/</view>
 <view class="privacy" bind:tap="agreement">隐私协议</view>
-
-
 </view>
+
+
 
 
 
