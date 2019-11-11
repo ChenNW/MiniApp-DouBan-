@@ -1,2 +1,30 @@
-<!--pages/Home/Home.wxml-->
-
+<!-- pages/Home/Home.wxml -->
+<view class="container">
+  <view class="header">
+    <view class="header-warp">
+      <image src="/assets/imgs/ic_search.png" />
+      搜索
+    </view>
+  </view>
+  <view class="main">
+    <view class="hotMoves">
+      <view class="hot_header">
+        <view class="title">影院热映</view>
+        <view class="hot_title_right">
+          <view class="seeMore">查看更多</view>
+          <view class="arrow"></view>
+        </view>
+      </view>
+      <scroll-view class="hot_list" scroll-x="true" scroll-x>
+        <view class="signleItem" wx:for="{{5}}">
+          <image class="cover_image" src="/assets/imgs/ic_launcher.png"></image>
+          <view class="move_title">我和我的祖国</view>
+          <view class="bottomView">
+            <image class="starimage" wx:for="{{5}}" src="/assets/imgs/rating_star_small_on.png" />
+            <view class="score">8.0</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

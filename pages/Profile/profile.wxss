@@ -1,8 +1,9 @@
 /* pages/Profile/profile.wxss */
 
 .version {
-    position: absolute;
-    bottom: 50rpx;
+    /* position: absolute; */
+    /* bottom: 50rpx; */
+    margin: 30rpx 0;
     color: lightgray;
     width: 100%;
     text-align: center;
@@ -70,7 +71,6 @@
     display: flex;
     align-items: center;
     padding-top: 20rpx;
-
 }
 
 .leftView .leftImage {
@@ -83,6 +83,7 @@
     font-size: 34rpx;
     color: #333333;
 }
+
 .rightInfoView {
     /* background-color: rebeccapurple; */
     flex: 1;
@@ -120,7 +121,6 @@
     margin-left: 30rpx;
     color: #C8C8C8;
     align-items: center;
-
 }
 
 .rightAllView .detailView {
@@ -149,6 +149,4 @@
     height: 3rpx;
     width: 100%;
     margin-top: 20rpx;
-
-
 }

@@ -1,7 +1,7 @@
 <view class="container">
 
 <image class="logo" src="/assets/imgs/ic_launcher.png" ></image>
-<view class="weChat btn-login" bind:tap="Wechat_click" >微信登录</view>
+<button class="weChat btn-login" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >微信登录</button>
 <view class="douban btn-login" bind:tap="account_click" >已有豆瓣账号登录</view>
 
 <view class="aggrment">登录表示同意

@@ -4,7 +4,19 @@ Page({
     LoginButtonClick: function() {
         console.log('点击了登录按钮')
             // 获取地理位置
-        wx.getLocation({
+
+        wx.navigateTo({
+            url: '/pages/Login/login',
+            success: (result) => {
+
+            },
+            fail: () => {},
+            complete: () => {}
+        });
+
+
+        /*
+            wx.getLocation({
             type: 'wgs84',
             altitude: false,
             success: (result) => {
@@ -14,11 +26,36 @@ Page({
                 const speed = result.speed;
                 const accracy = result.accuracy; //位置的精确度
 
+                wx.openLocation({
+                    latitude,
+                    longitude,
+                    scale: 18
+                })
+
+                wx.showModal({
+                    title: 'latitude',
+                    content: '',
+                    showCancel: true,
+                    cancelText: '取消',
+                    cancelColor: '#000000',
+                    confirmText: '确定',
+                    confirmColor: '#3CC51F',
+                    success: (result) => {
+                        if (result.confirm) {
+
+                        }
+                    },
+                    fail: () => {},
+                    complete: () => {
+                        console.log('6666')
+                    }
+                });
 
             },
             fail: () => {},
             complete: () => {}
         });
+        */
 
 
 

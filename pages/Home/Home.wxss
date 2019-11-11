@@ -1,1 +1,115 @@
 /* pages/Home/Home.wxss */
+
+
+/* .container {
+    display: flex;
+} */
+
+.header {
+    height: 80rpx;
+    background-color: #58BE6B;
+    padding: 0 15rpx;
+    display: flex;
+    align-items: center;
+}
+
+.header .header-warp {
+    background-color: #fff;
+    height: 50rpx;
+    width: 100%;
+    border-radius: 10rpx;
+    font-size: 26rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-warp image {
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 10rpx;
+}
+
+.main {
+    padding-left: 25rpx;
+}
+
+
+/* 影院热映模块 */
+
+.hotMoves .hot_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30rpx;
+    height: 100rpx;
+    /* background-color: red; */
+}
+
+.hot_title_right {
+    display: flex;
+    align-items: center;
+}
+
+.hot_header .title {
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #191919;
+}
+
+.arrow {
+    width: 16rpx;
+    height: 16rpx;
+    border: 2rpx solid #58BE6B;
+    border-left: none;
+    border-top: none;
+    transform: rotate(-45deg);
+}
+
+.seeMore {
+    color: #58BE6B;
+    font-size: 30rpx;
+}
+
+
+/* 单个item大小 */
+
+.hot_list {
+    display: flex;
+    /* 不换行 */
+    white-space: nowrap;
+}
+
+.signleItem {
+    /* background-color: red; */
+    width: 265rpx;
+    height: 400rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+    box-shadow: 0rpx 0rpx 2rpx 2rpx rgba(0, 0, 0, 0.05);
+    display: inline-block;
+}
+
+.move_title {
+    font-size: 30rpx;
+}
+
+.bottomView {
+    font-size: 26rpx;
+    color: #AEAEAE;
+    display: flex;
+}
+
+.cover_image {
+    width: 265rpx;
+    height: 300rpx;
+}
+
+.starimage {
+    width: 34rpx;
+    height: 34rpx;
+}
+
+.score {
+    margin-left: 10rpx;
+}
