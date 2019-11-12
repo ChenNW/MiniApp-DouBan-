@@ -31,7 +31,7 @@
 }
 
 .main {
-    padding-left: 25rpx;
+    /* padding-left: 25rpx; */
 }
 
 
@@ -42,6 +42,7 @@
     justify-content: space-between;
     align-items: center;
     margin-right: 30rpx;
+    margin-left: 20rpx;
     height: 100rpx;
     /* background-color: red; */
 }
@@ -82,16 +83,22 @@
 
 .signleItem {
     /* background-color: red; */
-    width: 265rpx;
+    width: 220rpx;
     height: 400rpx;
     border-radius: 10rpx;
-    margin-right: 20rpx;
+    margin-left: 20rpx;
     box-shadow: 0rpx 0rpx 2rpx 2rpx rgba(0, 0, 0, 0.05);
     display: inline-block;
 }
 
 .move_title {
     font-size: 30rpx;
+    /* 超过一行隐藏 */
+    overflow: hidden;
+    /* 文字隐藏后添加省略号 */
+    text-overflow: ellipsis;
+    /* 不换行 */
+    white-space: nowrap;
 }
 
 .bottomView {
@@ -101,8 +108,9 @@
 }
 
 .cover_image {
-    width: 265rpx;
+    width: 220rpx;
     height: 300rpx;
+    border-radius: 10rpx;
 }
 
 .starimage {

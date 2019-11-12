@@ -3,12 +3,32 @@ Page({
 
     onLoad: function() {
 
-        // this.getLocation((city) => {
+        this.getLocation((city) => {
 
-        //     this.getHotMoves(city)
-        // })
+            this.getHotMoves(city)
+        })
 
     },
+
+    data: {
+
+        hot_list: [{
+                small: "123",
+                title: '电影',
+                average: '8.9',
+                stars: '40'
+            },
+            {
+                small: "456",
+                title: '电影1',
+                average: '8.9',
+                stars: '40'
+            }
+        ]
+    },
+
+
+
 
     //请求热门数据
     getHotMoves: function(city) {
@@ -29,7 +49,11 @@ Page({
             responseType: 'text',
             success: (result) => {
                 wx.hideLoading();
-                console.log(result)
+                console.log(result.data)
+
+                this.hot_list = result.data.subjects;
+                this.setData({ hot_list: result.data.subjects })
+
 
             },
             fail: () => {
