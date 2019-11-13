@@ -8,6 +8,8 @@ Page({
             this.getHotMoves(city)
         })
 
+        this.getNnewMoves()
+
     },
 
     data: {
@@ -24,7 +26,46 @@ Page({
                 average: '8.9',
                 stars: '40'
             }
+        ],
+
+        new_moves: [{
+                small: "123",
+                title: '电影',
+                average: '8.9',
+                stars: '40'
+            },
+            {
+                small: "456",
+                title: '电影1',
+                average: '8.9',
+                stars: '40'
+            }
+
+
         ]
+    },
+
+    //请求新片榜
+    getNnewMoves: function() {
+
+        var reqTask = wx.request({
+            url: 'https://douban-api.uieee.com/v2/movie/new_movies',
+            data: {},
+            header: { 'content-type': 'json' },
+            method: 'GET',
+            dataType: 'json',
+            responseType: 'text',
+            success: (result) => {
+                console.log(result)
+            },
+            fail: () => {},
+            complete: () => {}
+        });
+
+
+
+
+
     },
 
 
@@ -49,7 +90,7 @@ Page({
             responseType: 'text',
             success: (result) => {
                 wx.hideLoading();
-                console.log(result.data)
+                // console.log(result.data)
 
                 this.hot_list = result.data.subjects;
                 this.setData({ hot_list: result.data.subjects })
