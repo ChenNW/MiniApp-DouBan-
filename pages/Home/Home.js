@@ -8,7 +8,8 @@ Page({
             this.getHotMoves(city)
         })
 
-        this.getNnewMoves()
+        this.getNewMoves()
+        this.getMouthMoves()
 
     },
 
@@ -42,11 +43,45 @@ Page({
             }
 
 
+        ],
+        mouth_moves: [{
+                small: "123",
+                title: '电影',
+                average: '8.9',
+                stars: '40'
+            },
+            {
+                small: "456",
+                title: '电影1',
+                average: '8.9',
+                stars: '40'
+            }
+
+
         ]
     },
 
     //请求新片榜
-    getNnewMoves: function() {
+    getMouthMoves: function() {
+
+        var reqTask = wx.request({
+            url: 'https://douban-api.uieee.com/v2/movie/weekly',
+            data: {},
+            header: { 'content-type': 'json' },
+            method: 'GET',
+            dataType: 'json',
+            responseType: 'text',
+            success: (result) => {
+
+
+                this.setData({ mouth_moves: result.data.subjects })
+            },
+            fail: () => {},
+            complete: () => {}
+        });
+    },
+    //请求新片榜
+    getNewMoves: function() {
 
         var reqTask = wx.request({
             url: 'https://douban-api.uieee.com/v2/movie/new_movies',
@@ -56,16 +91,13 @@ Page({
             dataType: 'json',
             responseType: 'text',
             success: (result) => {
-                console.log(result)
+
+
+                this.setData({ new_moves: result.data.subjects })
             },
             fail: () => {},
             complete: () => {}
         });
-
-
-
-
-
     },
 
 
