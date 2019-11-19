@@ -1,29 +1,6 @@
 // pages/Home/Home.js
 Page({
 
-    Move_detail: function() {
-
-        wx.navigateTo({
-            url: '/pages/movedetail/movedetail',
-            fail: () => {
-                wx.db.toastError('跳转失败')
-                console.log(error)
-            },
-            complete: () => {}
-        });
-
-    },
-
-    //查看更多
-    seeMore: function(res) {
-        const index = (res.currentTarget.dataset.index);
-        const obj = this.data.allData[index];
-        wx.navigateTo({
-            url: `/pages/seeMore/seeMore?title=${obj.title}&url=${obj.url}`,
-        });
-
-
-    },
     onLoad: function() {
         this.loadLocalData();
         // this.getLocation((city) => {
@@ -173,23 +150,23 @@ Page({
             complete: () => {}
         });
 
-    }
+    },
+
+    //查看更多
+    seeMore: function(evt) {
+        console.log(evt)
+        const index = evt.currentTarget.dataset.index;
+        const obj = this.data.allData[index];
+
+        wx.navigateTo({ //?title=${obj.title}&url=${obj.url}
+            url: `/pages/seeMore/seeMore?title=${obj.title}&url=${obj.url}`,
+        });
+
+
+    },
 
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 wx.setNavigationBarColor({
     frontColor: '#ffffff',
@@ -201,6 +178,8 @@ wx.setNavigationBarColor({
     fail: () => {},
     complete: () => {}
 });
+
+
 
 /*
 wx.getSetting({

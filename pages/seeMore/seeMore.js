@@ -9,9 +9,10 @@ Page({
     },
 
     onLoad: function(options) {
-        wx.setNavigationBarTitle({
-            title: '7777',
-        });
+        console.log(options.title);
+        // wx.setNavigationBarTitle({
+        //     title: '7777',
+        // });
 
     },
 
