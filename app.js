@@ -4,6 +4,17 @@ App({
 
 
         wx.db = {};
+        wx.db.url = (url) => {
+            return `https://douban-api.uieee.com/${url}`;
+        };
+
+
+        this.initToast();
+
+
+    },
+    // 初始化弹窗
+    initToast: function() {
 
         const toastTypeNormal = 0;
         const toastTypeSuccess = 1;
@@ -19,10 +30,10 @@ App({
             };
 
             if (type == toastTypeSuccess) {
-                options.icon = 'success'
+                options.icon = 'success';
             } else
             if (type == toastTypeError) {
-                options.image = '/assets/imgs/upsdk_cancel_normal.png'
+                options.image = '/assets/imgs/upsdk_cancel_normal.png';
             }
 
 
@@ -37,13 +48,13 @@ App({
         wx.db.toastSuccess = (title, duration) => {
             commonToast(title, toastTypeSuccess, duration);
         };
-        wx.db.toastTypeError = (title, duration) => {
+        wx.db.toastError = (title, duration) => {
             commonToast(title, toastTypeError, duration);
         };
 
-
-
     },
+
+
     globalData: {
         userInfo: null
     },

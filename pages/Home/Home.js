@@ -1,110 +1,87 @@
 // pages/Home/Home.js
 Page({
 
-    onLoad: function() {
+    Move_detail: function() {
 
-        this.getLocation((city) => {
-
-            this.getHotMoves(city)
-        })
-
-        this.getNewMoves()
-        this.getMouthMoves()
+        wx.navigateTo({
+            url: '/pages/movedetail/movedetail',
+            fail: () => {
+                wx.db.toastError('跳转失败')
+                console.log(error)
+            },
+            complete: () => {}
+        });
 
     },
 
+    //查看更多
+    seeMore: function(res) {
+        const index = (res.currentTarget.dataset.index);
+        const obj = this.data.allData[index];
+        wx.navigateTo({
+            url: `/pages/seeMore/seeMore?title=${obj.title}&url=${obj.url}`,
+        });
+
+
+    },
+    onLoad: function() {
+        this.loadLocalData();
+        // this.getLocation((city) => {
+        //     this.loadNewData(0, { city: city })
+        // });
+        // this.loadNewData(1);
+        // this.loadNewData(2);
+        // this.loadNewData(3);
+        // this.loadNewData(4);
+
+    },
+
+
     data: {
+        allData: [{
+                title: '影院热映',
+                url: 'v2/movie/in_theaters',
+                movies: []
 
-        hot_list: [{
-                small: "123",
-                title: '电影',
-                average: '8.9',
-                stars: '40'
             },
             {
-                small: "456",
-                title: '电影1',
-                average: '8.9',
-                stars: '40'
-            }
-        ],
+                title: '新片榜',
+                url: 'v2/movie/new_movies',
+                movies: []
 
-        new_moves: [{
-                small: "123",
-                title: '电影',
-                average: '8.9',
-                stars: '40'
             },
             {
-                small: "456",
-                title: '电影1',
-                average: '8.9',
-                stars: '40'
-            }
+                title: '口碑榜',
+                url: 'v2/movie/weekly',
+                movies: []
 
-
-        ],
-        mouth_moves: [{
-                small: "123",
-                title: '电影',
-                average: '8.9',
-                stars: '40'
             },
             {
-                small: "456",
-                title: '电影1',
-                average: '8.9',
-                stars: '40'
-            }
+                title: 'Top250',
+                url: 'v2/movie/top250',
+                movies: []
+            },
+            {
+                title: '北美票房榜',
+                url: 'v2/movie/us_box',
+                movies: []
+            },
+
 
 
         ]
     },
-
-    //请求新片榜
-    getMouthMoves: function() {
-
-        var reqTask = wx.request({
-            url: 'https://douban-api.uieee.com/v2/movie/weekly',
-            data: {},
-            header: { 'content-type': 'json' },
-            method: 'GET',
-            dataType: 'json',
-            responseType: 'text',
-            success: (result) => {
-
-
-                this.setData({ mouth_moves: result.data.subjects })
-            },
-            fail: () => {},
-            complete: () => {}
-        });
-    },
-    //请求新片榜
-    getNewMoves: function() {
-
-        var reqTask = wx.request({
-            url: 'https://douban-api.uieee.com/v2/movie/new_movies',
-            data: {},
-            header: { 'content-type': 'json' },
-            method: 'GET',
-            dataType: 'json',
-            responseType: 'text',
-            success: (result) => {
-
-
-                this.setData({ new_moves: result.data.subjects })
-            },
-            fail: () => {},
-            complete: () => {}
-        });
+    //加载本地数据
+    loadLocalData: function() {
+        for (let index = 0; index < this.data.allData.length; index++) {
+            let obj = this.data.allData[index];
+            obj.movies = wx.getStorageSync(obj.url) || [];
+        }
+        this.setData(this.data);
     },
 
-
-
-
-    //请求热门数据
-    getHotMoves: function(city) {
+    //加载新数据
+    loadNewData: function(index, params) {
 
         wx.showLoading({
             title: '加载中',
@@ -112,20 +89,33 @@ Page({
         });
 
         wx.request({
-            url: 'https://douban-api.uieee.com/v2/movie/in_theaters',
-            data: {
-                city: city
-            },
+            url: wx.db.url(this.data.allData[index].url),
+            data: params,
             header: { 'content-type': 'json' },
             method: 'GET',
             dataType: 'json',
             responseType: 'text',
             success: (result) => {
+                let obj = this.data.allData[index];
                 wx.hideLoading();
-                // console.log(result.data)
+                console.log(result.data)
 
-                this.hot_list = result.data.subjects;
-                this.setData({ hot_list: result.data.subjects })
+                obj.title = result.data.title;
+                const movies = result.data.subjects;
+                for (let idx = 0; idx < movies.length; idx++) {
+                    let movie = movies[idx].subject || movies[idx];
+                    obj.movies.push(movie);
+                }
+                this.setData(this.data);
+
+                //数据缓存
+                wx.setStorage({
+                    key: obj.url,
+                    data: obj.movies,
+                    success: (result) => {
+                        // wx.db.toastSuccess('缓存成功');
+                    },
+                });
 
 
             },
@@ -135,6 +125,7 @@ Page({
             },
             complete: () => {}
         });
+
 
 
     },

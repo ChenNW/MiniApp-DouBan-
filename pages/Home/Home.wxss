@@ -37,7 +37,7 @@
 
 /* 影院热映模块 */
 
-.hotMoves .hot_header {
+.public {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,7 +108,7 @@
 }
 
 .cover_image {
-    width: 220rpx;
+    width: 100%;
     height: 300rpx;
     border-radius: 10rpx;
 }
