@@ -154,7 +154,7 @@ Page({
 
     //查看更多
     seeMore: function(evt) {
-        console.log(evt)
+        console.log(1234)
         const index = evt.currentTarget.dataset.index;
         const obj = this.data.allData[index];
 

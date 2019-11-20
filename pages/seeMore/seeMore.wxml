@@ -1,2 +1,31 @@
-<!--pages/seeMore/seeMore.wxml-->
-<text>8989898</text>
+<!-- pages/seeMore/seeMore.wxml -->
+<view class="container">
+    <!-- <view id="{{index}}" class="signleItem" wx:for="{{movies}}" wx:key="unique" bind:tap="Move_detail">
+        <image class="cover_image" src="{{item.images.small}}"></image>
+        <view class="move_title">{{item.title}}</view>
+        <view class="bottomView">
+            <block wx:if="{{item.rating.stars >0}}">
+                <view>
+                    <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="starItem">
+                        <image class="starimage" src="/assets/imgs/rating_star_small_on.png" wx:if="{{item.rating.stars/10 >= index+1}}" />
+                        <image class="starimage" src="/assets/imgs/rating_star_small_half.png" wx:elif="{{item.rating.stars/10 >= index && item.rating.stars%10 != 0}}" />
+                        <image class="starimage" src="/assets/imgs/rating_star_small_off.png" wx:else />
+                    </block>
+                </view>
+                <view class="score">{{item.rating.average}}</view>
+            </block>
+            <block wx:else>暂无评分</block>
+        </view>
+    </view>
+    <view wx:if="{{movies.length %3>0}}" class="signleItem hide"></view>
+    <view wx:if="{{movies.length %3 == 1}}" class="signleItem hide"></view> -->
+
+<customMovieitem wx:for="{{movies}}" 
+image= "{{item.images.small}}"
+title= "{{item.title}}"
+score= "{{item.rating.average}}"
+stars= "{{item.rating.stars}}"
+count= "{{movies.length}}"
+></customMovieitem>
+
+</view>

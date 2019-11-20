@@ -1,3 +1,6 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "customMovieitem": "/pages/CustomMovieItem/customMovieItem"
+    }
+
 }

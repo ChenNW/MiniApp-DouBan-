@@ -1,10 +1,4 @@
-/* pages/seeMore/seeMore.wxss */
-
-.container {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-}
+/* pages/CustomMovieItem/customMovieItem.wxss */
 
 .signleItem {
     /* background-color: red; */

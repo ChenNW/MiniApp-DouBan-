@@ -16,7 +16,7 @@
         </view>
       </view>
       <scroll-view class="hot_list" scroll-x="true" scroll-x>
-        <view id="{{index}}" class="signleItem" wx:for="{{movie.movies}}" wx:key="unique" bind:tap="Move_detail">
+        <!-- <view id="{{index}}" class="signleItem" wx:for="{{movie.movies}}" wx:key="unique" bind:tap="Move_detail">
           <image class="cover_image" src="{{item.images.small}}"></image>
           <view class="move_title">{{item.title}}</view>
           <view class="bottomView">
@@ -35,9 +35,15 @@
             </block>
               
           </view>
-        </view>
+        </view> -->
+        <customMovieitem class="signleItem" wx:for="{{movie.movies}}" 
+        image="{{item.images.small}}" 
+        title="{{item.title}}" 
+        score="{{item.rating.average}}"
+         stars="{{item.rating.stars}}" 
+         count="{{movies.length}}">
+         </customMovieitem>
       </scroll-view>
     </view>
-    
   </view>
 </view>

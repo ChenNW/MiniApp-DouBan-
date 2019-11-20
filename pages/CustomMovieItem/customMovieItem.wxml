@@ -1,0 +1,22 @@
+<!-- pages/CustomMovieItem/customMovieItem.wxml -->
+<view class="container">
+    <view id="{{index}}" class="signleItem" wx:key="unique" bind:tap="Move_detail">
+        <image class="cover_image" src="{{image}}"></image>
+        <view class="move_title">{{title}}</view>
+        <view class="bottomView">
+            <block wx:if="{{stars >0}}">
+                <view>
+                    <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="starItem">
+                        <image class="starimage" src="/assets/imgs/rating_star_small_on.png" wx:if="{{stars/10 >= index+1}}" />
+                        <image class="starimage" src="/assets/imgs/rating_star_small_half.png" wx:elif="{{stars/10 >= index && stars%10 != 0}}" />
+                        <image class="starimage" src="/assets/imgs/rating_star_small_off.png" wx:else />
+                    </block>
+                </view>
+                <view class="score">{{score}}</view>
+            </block>
+            <block wx:else>暂无评分</block>
+        </view>
+        <view wx:if="{{count %3 >0}}" class="signleItem hide"></view>
+        <view wx:if="{{count %3 == 1}}" class="signleItem hide"></view>
+    </view>
+</view>
