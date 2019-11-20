@@ -1,5 +1,5 @@
 <!-- pages/seeMore/seeMore.wxml -->
-<view class="container">
+<view class="container" >
     <!-- <view id="{{index}}" class="signleItem" wx:for="{{movies}}" wx:key="unique" bind:tap="Move_detail">
         <image class="cover_image" src="{{item.images.small}}"></image>
         <view class="move_title">{{item.title}}</view>
@@ -19,7 +19,15 @@
     </view>
     <view wx:if="{{movies.length %3>0}}" class="signleItem hide"></view>
     <view wx:if="{{movies.length %3 == 1}}" class="signleItem hide"></view> -->
-    <customMovieitem wx:for="{{movies}}" image="{{item.images.small}}" title="{{item.title}}" score="{{item.rating.average}}" stars="{{item.rating.stars}}" count="{{movies.length}}"></customMovieitem>
-    <view wx:if="{{movies.length %3 >0}}" class="signleItem hide"></view>
-    <view wx:if="{{movies.length %3 == 1}}" class="signleItem hide"></view>
+    <view class="new-item" wx:for="{{movies}}">
+    <customMovieitem 
+    image="{{item.images.small}}" 
+    title="{{item.title}}" 
+    score="{{item.rating.average}}"
+    stars="{{item.rating.stars}}" 
+    ></customMovieitem>
+    </view>
+    
+    <!-- <view wx:if="{{movies.length %3 >0}}" class="signleItem hide"></view>
+    <view wx:if="{{movies.length %3 == 1}}" class="signleItem hide"></view> -->
 </view>
