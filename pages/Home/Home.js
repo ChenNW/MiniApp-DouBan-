@@ -74,6 +74,7 @@ Page({
             responseType: 'text',
             success: (result) => {
                 let obj = this.data.allData[index];
+                obj.movies = [];
                 wx.hideLoading();
                 console.log(result.data)
 

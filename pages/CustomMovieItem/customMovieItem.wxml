@@ -16,7 +16,6 @@
             </block>
             <block wx:else>暂无评分</block>
         </view>
-        <view wx:if="{{count %3 >0}}" class="signleItem hide"></view>
-        <view wx:if="{{count %3 == 1}}" class="signleItem hide"></view>
+       
     </view>
 </view>
