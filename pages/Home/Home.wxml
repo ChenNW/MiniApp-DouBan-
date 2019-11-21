@@ -1,4 +1,7 @@
 <!-- pages/Home/Home.wxml -->
+
+<nav-bar title= "首页"></nav-bar>
+
 <view class="container">
   <view class="header">
     <view class="header-warp">
@@ -36,12 +39,8 @@
               
           </view>
         </view> -->
-        <customMovieitem class="signleItem" wx:for="{{movie.movies}}" 
-        image="{{item.images.small}}" 
-        title="{{item.title}}" 
-        score="{{item.rating.average}}"
-         stars="{{item.rating.stars}}" 
-         count="{{movies.length}}">
+        <customMovieitem class="signleItem" wx:for="{{movie.movies}}" wx:for-item="Signle_movie" 
+         movie="{{Signle_movie}}">
          </customMovieitem>
       </scroll-view>
     </view>

@@ -5,25 +5,9 @@ Component({
      */
     properties: {
 
-        image: {
-            type: String,
-            value: ''
-        },
-        title: {
-            type: String,
-            value: '电影'
-        },
-        score: {
-            type: String,
-            value: '8.0'
-        },
-        stars: {
-            type: Number,
-            value: 5
-        },
-        count: {
-            type: Number,
-            value: 20
+        movie: {
+            type: Object,
+            value: null
         }
 
 
@@ -41,5 +25,16 @@ Component({
      */
     methods: {
 
+        Move_detail: function() {
+            wx.navigateTo({
+                url: `/pages/movie-detail/movie-detail?movie=${ JSON.stringify(this.data.movie) }`,
+                success: (result) => {
+
+                },
+                fail: () => {},
+                complete: () => {}
+            });
+
+        }
     }
 })

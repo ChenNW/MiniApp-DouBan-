@@ -19,12 +19,9 @@
     </view>
     <view wx:if="{{movies.length %3>0}}" class="signleItem hide"></view>
     <view wx:if="{{movies.length %3 == 1}}" class="signleItem hide"></view> -->
-    <view class="new-item" wx:for="{{movies}}">
+    <view class="new-item" wx:for="{{movies}}" wx:for-item="Signle_movie" >
     <customMovieitem 
-    image="{{item.images.small}}" 
-    title="{{item.title}}" 
-    score="{{item.rating.average}}"
-    stars="{{item.rating.stars}}" 
+    movie="{{Signle_movie}}">
     ></customMovieitem>
     </view>
     

@@ -1,0 +1,28 @@
+/* pages/component/nav-bar/nav-bar.wxss */
+
+.nav-bar {
+    display: flex;
+    /* 主轴 */
+    justify-content: center;
+    position: relative;
+    /* height: 128rpx; */
+    /* 纵轴 */
+    align-items: center;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.imgs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.public {
+    width: 32rpx;
+    height: 32rpx;
+    margin-left: 30rpx;
+}
