@@ -49,13 +49,20 @@ Component({
      * 组件的方法列表
      */
     methods: {
-
+        back: function() {
+            wx.navigateBack();
+        },
+        home: function() {
+            wx.navigateBack({
+                delta: 999
+            });
+        }
     },
 
     lifetimes: {
         attached: function() {
             // 在组件实例进入页面节点树时执行
-            console.log('状态栏栏高度' + wx.db.statusBarHeight, '导航栏高度' + wx.db.navBarHeight);
+            console.log('状态栏高度' + wx.db.statusBarHeight, '导航栏高度' + wx.db.navBarHeight);
             const statusBarStyle = `
         height:${wx.db.statusBarHeight}px
         background-color: ${ this.data.statusBarColor }`;
@@ -65,10 +72,7 @@ Component({
         color: ${ this.data.title_color };`;
 
             this.setData({ statusBarStyle, navBarStyle })
-
-
         },
-
-    },
+    }
 
 })

@@ -1,8 +1,6 @@
 //app.js
 App({
     onLaunch: function() {
-
-
         wx.db = {};
         wx.db.url = (url) => {
             return `https://douban-api.uieee.com/${url}`;
@@ -10,13 +8,14 @@ App({
         this.initToast();
 
         const info = wx.getSystemInfoSync();
-        console.log(info.safeArea.top);
-        wx.db.statusBarHeight = info.safeArea.top;
+        console.log(info);
+        wx.db.statusBarHeight = info.statusBarHeight;
         if (info.platform == 'android') {
             wx.db.navBarHeight = 48;
         } else {
             wx.db.navBarHeight = 44;
         }
+
 
 
     },

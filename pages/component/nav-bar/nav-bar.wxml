@@ -3,8 +3,8 @@
     <view style="{{ statusBarStyle }}"></view>
     <view class="nav-bar" style="{{ navBarStyle }}">
         <view class="imgs">
-            <image class="back public" src="/assets/imgs/nav_back.png" />
-            <image class="home public" src="/assets/imgs/nav_home.png" />
+            <image bind:tap="back" class="back public" wx:if="{{ back == 'true' }}" src="/assets/imgs/nav_back.png" />
+            <image bind:tap="home" class="home public" wx:if="{{ back == 'true' }}" src="/assets/imgs/nav_home.png" />
         </view>
         <view class="title">{{title}}</view>
     </view>

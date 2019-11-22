@@ -6,7 +6,7 @@
         <view class="bottomView">
             <block wx:if="{{movie.rating.stars >0}}">
                 <view>
-                    <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="starItem">
+                    <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="starItem" wx:key="uinque">
                         <image class="starimage" src="/assets/imgs/rating_star_small_on.png" wx:if="{{movie.rating.stars/10 >= index+1}}" />
                         <image class="starimage" src="/assets/imgs/rating_star_small_half.png" wx:elif="{{movie.rating.stars/10 >= index && movie.rating.stars%10 != 0}}" />
                         <image class="starimage" src="/assets/imgs/rating_star_small_off.png" wx:else />

@@ -19,7 +19,7 @@
     </view>
     <view wx:if="{{movies.length %3>0}}" class="signleItem hide"></view>
     <view wx:if="{{movies.length %3 == 1}}" class="signleItem hide"></view> -->
-    <view class="new-item" wx:for="{{movies}}" wx:for-item="Signle_movie" >
+    <view class="new-item" wx:for="{{movies}}" wx:key="uinque" wx:for-item="Signle_movie" >
     <customMovieitem 
     movie="{{Signle_movie}}">
     ></customMovieitem>

@@ -11,7 +11,7 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
+        "navigationBarTitleText": "豆瓣评分",
         "navigationBarTextStyle": "black",
         "navigationStyle": "custom"
     },
@@ -43,13 +43,6 @@
         ],
         "color": "#a9b7b7",
         "borderStyle": "black"
-    },
-    "debug": true,
-    "networkTimeout": {
-        "request": 10000,
-        "downloadFile": 10000
-    },
-    "navigateToMiniProgramAppIdList": [
-        "wx0377387d7d5af2d5"
-    ]
+    }
+
 }

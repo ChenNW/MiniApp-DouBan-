@@ -1,27 +1,42 @@
 /* pages/component/nav-bar/nav-bar.wxss */
 
 .nav-bar {
-    display: flex;
-    /* 主轴 */
+    /* display: flex;
     justify-content: center;
     position: relative;
-    /* 纵轴 */
     align-items: center;
+    font-size: 32rpx;
+    font-weight: bold; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     font-size: 32rpx;
     font-weight: bold;
 }
 
 .imgs {
-    position: absolute;
+    /* position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     align-items: center;
+    display: flex; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
     display: flex;
+    align-items: center;
+    padding: 0 30rpx;
 }
 
 .public {
     width: 32rpx;
     height: 32rpx;
     margin-left: 30rpx;
+}
+
+.home {
+    margin-left: 40rpx;
 }

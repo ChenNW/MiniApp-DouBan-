@@ -1,5 +1,11 @@
 <!-- pages/Home/Home.wxml -->
-<nav-bar title="首页" navBarColor="#42BD55" ></nav-bar>
+<nav-bar title="首页"
+  navBarColor="#42BD55"
+  statusBarColor="#42BD55"
+  titleColor="#fff"
+  back="false"
+  home="false"></nav-bar>
+
 <view class="container">
   <view class="header">
     <view class="header-warp">
@@ -8,7 +14,7 @@
     </view>
   </view>
   <view class="main">
-    <view class="hotMoves" wx:for="{{allData}}" wx:for-item="movie">
+    <view class="hotMoves" wx:for="{{allData}}" wx:for-item="movie" wx:key="uinque">
       <view class="hot_header public">
         <view class="title">{{movie.title}}</view>
         <view data-index="{{index}}" class="hot_title_right" bind:tap="seeMore">
@@ -37,7 +43,7 @@
               
           </view>
         </view> -->
-        <customMovieitem class="signleItem" wx:for="{{movie.movies}}" wx:for-item="Signle_movie" movie="{{Signle_movie}}"></customMovieitem>
+        <customMovieitem class="signleItem" wx:for="{{movie.movies}}" wx:key="uinque" wx:for-item="Signle_movie" movie="{{Signle_movie}}"></customMovieitem>
       </scroll-view>
     </view>
   </view>
