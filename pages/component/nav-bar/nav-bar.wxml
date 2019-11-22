@@ -1,7 +1,7 @@
 <!-- pages/component/nav-bar/nav-bar.wxml -->
 <view class="container">
-    <view style="{{statusBarStyle}}"></view>
-    <view class="nav-bar" style="{{navBarStyle}}">
+    <view style="{{ statusBarStyle }}"></view>
+    <view class="nav-bar" style="{{ navBarStyle }}">
         <view class="imgs">
             <image class="back public" src="/assets/imgs/nav_back.png" />
             <image class="home public" src="/assets/imgs/nav_home.png" />

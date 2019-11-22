@@ -1,4 +1,8 @@
 {
-    "usingComponents": {},
-    "navigationBarTitleText": "榜单"
+    "usingComponents": {
+        "customMovieitem": "/pages/CustomMovieItem/customMovieItem",
+        "nav-bar": "/pages/component/nav-bar/nav-bar"
+
+    }
+
 }

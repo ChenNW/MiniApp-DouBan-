@@ -1,1 +1,2 @@
 <!--pages/List/List.wxml-->
+<nav-bar title="榜单" navBarColor="#42BD55" statusBarColor="#42BD55"></nav-bar>

@@ -5,7 +5,6 @@
     /* 主轴 */
     justify-content: center;
     position: relative;
-    /* height: 128rpx; */
     /* 纵轴 */
     align-items: center;
     font-size: 32rpx;

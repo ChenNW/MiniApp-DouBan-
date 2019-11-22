@@ -55,16 +55,14 @@ Component({
     lifetimes: {
         attached: function() {
             // 在组件实例进入页面节点树时执行
-
+            console.log('状态栏栏高度' + wx.db.statusBarHeight, '导航栏高度' + wx.db.navBarHeight);
             const statusBarStyle = `
-        height:${ wx.db.statusBarHeight }px
-        background-color: ${ this.data.statusBarColor } 
-        `;
+        height:${wx.db.statusBarHeight}px
+        background-color: ${ this.data.statusBarColor }`;
             const navBarStyle = `
         height:${wx.db.navBarHeight}px;
         background-color: ${ this.data.navBarColor };
-        color: ${ this.data.title_color };
-        `;
+        color: ${ this.data.title_color };`;
 
             this.setData({ statusBarStyle, navBarStyle })
 

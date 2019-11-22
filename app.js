@@ -10,7 +10,8 @@ App({
         this.initToast();
 
         const info = wx.getSystemInfoSync();
-        wx.db.statusBarHeight = info.statusBarHeight;
+        console.log(info.safeArea.top);
+        wx.db.statusBarHeight = info.safeArea.top;
         if (info.platform == 'android') {
             wx.db.navBarHeight = 48;
         } else {

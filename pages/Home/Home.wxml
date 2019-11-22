@@ -1,7 +1,5 @@
 <!-- pages/Home/Home.wxml -->
-
-<nav-bar title= "首页"></nav-bar>
-
+<nav-bar title="首页" navBarColor="#42BD55" ></nav-bar>
 <view class="container">
   <view class="header">
     <view class="header-warp">
@@ -39,9 +37,7 @@
               
           </view>
         </view> -->
-        <customMovieitem class="signleItem" wx:for="{{movie.movies}}" wx:for-item="Signle_movie" 
-         movie="{{Signle_movie}}">
-         </customMovieitem>
+        <customMovieitem class="signleItem" wx:for="{{movie.movies}}" wx:for-item="Signle_movie" movie="{{Signle_movie}}"></customMovieitem>
       </scroll-view>
     </view>
   </view>
